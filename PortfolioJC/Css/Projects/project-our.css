@@ -1,0 +1,63 @@
+/*
+    OUR
+*/
+.proj-our {
+    background-image: url('../../Assets/MainPage/door.jpg');
+    filter: drop-shadow(3px 3px 6px rgba(0,0,0,.10));
+    border: none !important;
+    box-shadow: inset 10em 2em 8em rgba(0, 0, 0, 0.4) !important;
+}
+
+.our-project .project::before{
+    background: none !important;
+    width: 0;
+}
+
+.proj-our .proj-hover-progress-value::after{
+    content: '40%';
+    color: var(--myred);
+}
+
+.proj-progress-our::after{
+    content: 'Em desenvolvimento';
+}
+
+.proj-our .proj-hover-progress-status, .proj-hover-progress-value, .proj-hover-link{
+    color: var(--myred) !important;
+}
+
+.proj-our .progress{
+    --bs-progress-bar-bg: var(--myred) !important;
+}
+
+.proj-our .proj-hover-link{
+    border-bottom: 1px solid var(--myred) !important;
+    color: var(--myred) !important;
+}
+
+.proj-our .proj-hover-link:hover{
+    color: var(--myred) !important;
+}
+
+
+.our-project .project {
+    height: 420px !important;
+    min-width: 100% !important;
+}
+
+.our-project .project:hover :is(.proj-numeration, .proj-info, .proj-category) {
+    display: block !important;
+}
+
+@keyframes blink {
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+  }
+  
+  #typewriter-cursor {
+    animation-name: blink;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    margin-left: 2px;
+  }

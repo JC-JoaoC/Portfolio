@@ -1,0 +1,255 @@
+.project {
+    position: relative; 
+    display: flex;
+    align-items: flex-end;
+    background-color: black;
+    height: 420px;
+    padding: 1.5rem;
+    background-position: center;
+    background-size: cover;
+    /* box-shadow: inset 10px 10px 20px rgba(0, 0, 0, 0.5); */
+    transition: all 0.3s ease;
+    transition: box-shadow 0.3s ease-in-out;
+    border: 1px solid black;
+    border-style: inset;
+}
+
+.project::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 20em;
+    background: linear-gradient(to right, rgba(0, 0, 0, 1), transparent);
+  }
+
+.proj-first {
+    margin-left: 0 !important;
+}
+
+.proj-last {
+    margin-right: 0 !important;
+}
+
+.proj-numeration {
+    color: black;
+    text-transform: uppercase;
+    font-size: 40px;
+    font-family: 'ClashDisplay-Bold';
+    margin: 0 10px 0 0;
+    background-color: white;
+    padding: 0 10px;
+    align-self: center;
+    min-width: 50px;
+    text-align: center;
+    z-index: 99;
+    position: relative;
+    /* mix-blend-mode: color-dodge; */
+}
+
+.proj-container{
+    border: 1px solid white;
+    height: 372px;
+}
+
+.proj-subtitle{
+    color: white;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-family: 'ClashDisplay-Regular';
+    margin-bottom: -12px;
+}
+
+.proj-title{
+    color: white;
+    text-transform: uppercase;
+    font-size: 36px;
+    font-family: 'ClashDisplay-Bold';
+    margin-bottom: -4px;
+}
+
+.proj-category {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-family: 'ClashDisplay-Regular';
+    text-transform: uppercase;
+    padding: 1.5rem;
+    font-size: 12px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+    letter-spacing: 0.15em;
+}
+
+.proj-hover-progress {
+    margin-top: auto;
+  }
+/*
+    Durante mousehover
+*/
+/* 
+.proj-hover {
+    display: none !important;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+}
+
+.project:hover .proj-hover {
+    display: block !important;
+}
+
+.project:hover :is(.proj-numeration, .proj-info, .proj-category) {
+    display: none !important;
+} */
+
+.proj-info{
+    z-index: 99;
+}
+
+.proj-hover {
+    /* position: absolute; */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-family: 'ClashDisplay-Regular';
+    padding: 1.5rem;
+    z-index: 1;
+}
+
+.proj-hover hr{
+    width: 10px;
+    height: 2px;
+    background-color: var(--myblack) !important;
+    margin: 10px 0 10px 0;
+    opacity: 1;
+}
+
+.project:hover .proj-hover {
+    display: flex;
+}
+
+.proj-hover-title{
+    color: white;
+    text-transform: uppercase;
+    font-size: 26px;
+    font-family: 'ClashDisplay-Bold';
+    margin: -4px 0 0 0;
+}
+
+.proj-hover-subtitle{
+    color: white;
+    font-size: 14px;
+    font-family: 'ClashDisplay-Regular';
+    margin: -4px 0 6px 0;
+    padding: 0;
+    line-height: 1rem;
+    /* font-style: italic; */
+}
+
+.proj-hover-content{
+    color: white;
+    font-size: 15px;
+    font-family: 'ClashDisplay-Regular';
+}
+
+.proj-hover-link{
+    text-decoration: none;
+    padding-bottom: 2px;
+    cursor: none !important; 
+    text-transform: uppercase;
+    text-align: end;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.proj-hover-link::after{
+    content: "🡽";
+ }
+
+.proj-hover-progress{
+    /* margin-bottom: 34px; */
+}
+
+.proj-hover-progress-title{
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+
+.proj-hover-progress-status{
+    font-size: 14px;
+    font-weight: regular;
+    text-transform: uppercase;
+}
+
+
+.proj-hover-progress-value{
+    font-size: 14px;
+    font-weight: bold;
+    text-align: right;
+}
+
+.proj-hover-progress-bar{
+    margin-top: -10px;
+}
+
+.proj-hover-progress hr{
+    margin-top: -10px;
+}
+
+.progress {
+    color: white !important;
+    background-color: gray !important;
+}
+
+/*
+    Lista
+*/
+.project-list{
+    height: 46.8px !important;
+}
+
+.project-list:hover {
+    background-color: #d0d0d0; 
+    transition: 200ms;
+}
+
+.project-list:hover :is(.project-number,.project-name){
+    font-family: 'ClashDisplay-Bold' !important;
+    text-transform: uppercase;
+    color: black !important;
+    transition: 200ms;
+}
+
+.project-list:active {
+    background-color: #e0e0e0;
+}
+
+.project-list.active {
+    background-color: #000;
+}
+
+.project-list.active :is(.project-number,.project-name){
+    font-family: 'ClashDisplay-Bold' !important;
+    color: white !important;
+    text-transform: uppercase;
+    transition: 200ms;
+}
+
+.project-list .project-name{
+    margin-top: -4px !important;
+}
+
+.project-list.active .project-name::after {
+    content: "🡽";
+}
